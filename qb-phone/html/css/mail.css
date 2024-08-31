@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+.mail-app {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, rgb(78, 104, 118), rgb(64, 106, 129));
+    overflow: hidden;
+}
+
+.mail-home {
+    position: relative;
+    left: 0;
+}
+
+.mail-header {
+    display: block;
+    height: 14vh;
+    width: 100%;
+}
+
+#mail-header-text {
+    position: absolute;
+    top: 3.5vh;
+    left: 5vh;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 5vh;
+    letter-spacing: 10px;
+    color: white;
+}
+
+#mail-header-mail {
+    position: absolute;
+    top: 9.6vh;
+    left: 3.3vh;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.3vh;
+    color: white;
+}
+
+#mail-header-lastsync {
+    position: absolute;
+    top: 10.3vh;
+    left: 3.5vh;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1vh;
+    color: white;
+}
+
+.mail-list {
+    position: absolute;
+    width: 99%;
+    height: 44.7vh;
+    top: 12vh;
+    left: .1vh;
+    overflow-x: hidden !important;
+    overflow-y: scroll;
+}
+
+.mail-list::-webkit-scrollbar {
+    display: none;
+}
+
+.mail {
+    position: relative;
+    height: 7.5vh;
+    width: 100%;
+    left: 4px;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    transition: .15s ease-in-out;
+    background: linear-gradient(0deg, rgb(28, 28, 28), rgb(34, 34, 34));
+    filter: drop-shadow(0px 3px 3px #00000042);
+}
+
+.mail:hover {
+    background: linear-gradient(0deg, rgb(35, 43, 50), rgb(49, 63, 75));
+    transform: scale(1.01);
+}
+
+.mail-sender {
+    position: absolute;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.6vh;
+    color: white;
+    left: 1.5vh;
+    top: 1vh;
+}
+
+.mail-text {
+    position: absolute;
+    top: 3.3vh;
+    left: 1.5vh;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.15vh;
+    color: white;
+    max-width: 18vh;
+    width: 16vh;
+}
+.mail-text > p {
+    white-space: nowrap;
+    display:inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+.mail-time {
+    position: absolute;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1vh;
+    color: white;
+    right: 1.5vh;
+    top: 1vh;
+}
+
+.opened-mail {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, rgb(78, 104, 118), rgb(64, 106, 129));
+    overflow: hidden;
+    top: 0;
+    left: -30vh;
+}
+
+.opened-mail-header {
+    display: block;
+    height: 14vh;
+    width: 100%;
+}
+
+.mail-back {
+    position: absolute;
+    top: 5.5vh;
+    left: 1.9vh;
+}
+
+.mail-back > i {
+    color: white;
+    font-size: 2vh;
+    transition: .05s ease-in-out;
+}
+
+.mail-back:hover #mail-back {
+    color: rgb(49, 63, 75);
+    transition: .05s ease-in-out;
+}
+
+.mail-subject {
+    position: absolute;
+    color: white;
+    top: 8vh;
+    left: 2vh;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.8vh;
+    max-width: 22vh;
+}
+
+.mail-subject > p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mail-date {
+    position: absolute;
+    top: 13vh;
+    left: 2vh;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1vh;
+    color: white;
+}
+
+.mail-spacing {
+    position: absolute;
+    width: 93%;
+    background-color: white;
+    height: .2vh;
+    top: 15.5vh;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    border-radius: 20vh;
+}
+
+.mail-content {
+    position: absolute;
+    height: calc(100% - 250px);
+    top: 17.3vh;
+    left: 2vh;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.3vh;
+    color: white;
+    max-width: 23vh;
+    overflow-y: scroll;
+}
+.mail-content::-webkit-scrollbar {
+    display: none;
+}
+.mail-content > p {
+    white-space: nowrap;
+    display:inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 100;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+.opened-mail-footer {
+    position: absolute;
+    width: 100%;
+    height: 4vh;
+    bottom: 40px;
+}
+
+.opened-mail-footer-item {
+    position: relative;
+    width: 50%;
+    height: 4vh;
+    text-align: center;
+    line-height: 4.3vh;
+    color: white;
+    font-size: 1.8vh;
+    transition: .1s ease-in-out;
+    float: left;
+}
+
+.opened-mail-footer-item:hover {
+    color: #dc143c;
+}
+
+.opened-mail-footer-item:hover .mail-icon {
+    font-size: 1.9vh;
+    transition: .1s ease-in-out;
+    animation: Shake 1s infinite;
+}
+
+@keyframes Shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+/* Advert App */
+
+.advert-app {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to top right, #b5a570 0%, #d7c27b 100%);
+    overflow: hidden;
+}
+
+.advert-header {
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    top: 0;
+}
+
+#advert-header-text {
+    position: absolute;
+    top: 6vh;
+    left: 5vh;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 2.5vh;
+    color: white;
+}
+
+#advert-header-name {
+    position: absolute;
+    top: 9.5vh;
+    left: 9vh;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1vh;
+    color: white;
+}
+
+.advert-list {
+    position: absolute;
+    width: 99%;
+    height: 39.5vh;
+    top: 12vh;
+    left: .3vh;
+    overflow-x: hidden !important;
+    overflow-y: scroll;
+}
+
+.advert-list::-webkit-scrollbar {
+    display: none;
+}
+
+.advert {
+    position: relative;
+    background: linear-gradient(to top, #1b1b1b 0%, #262626 100%);
+    height: auto;
+    min-height: 4vh;
+    width: 95%;
+    transition: .05s ease-in-out;
+    margin: 0 auto;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    border-radius: 0.15rem;
+}
+
+.advert > p {
+    display: block;
+    font-family: 'Quicksand', sans-serif;
+    max-width: 25vh;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-size: 1.5vh;
+    margin-left: 1vh;
+    padding-bottom: 2vh;
+}
+
+.advert:hover {
+    background-color: #c8ae39;
+    transition: .05s ease-in-out;
+}
+
+.advert-sender {
+    position: relative;
+    top: .2vh;
+    left: .7vh;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1vh;
+}
+
+.advert-num {
+    color: #222222;
+    position: relative;
+    top: -10px;
+    font-size: .8vh;
+}
+
+#adv-delete {
+    color: #222222;
+    transition: all .3s;
+    position: absolute;
+    left: 26vh;
+    top: .5vh;
+}
+
+#adv-delete:hover {
+    transform: scale(1.01);
+    color: rgb(172, 62, 62);
+    animation: Shake 1s infinite;
+}
+
+.test-slet {
+    position: absolute;
+    width: 100%;
+    height: 4.2vh;
+    top: 52.6vh;
+    transition: .1s ease-in-out;
+    text-align: center;
+    line-height: 4.2vh;
+    font-size: 2.3vh;
+    color: white;
+    /* background-color: rgb(36, 36, 36); */
+}
+
+.test-slet:hover {
+    transition: .1s ease-in-out;
+}
+
+.test-slet:hover .test-icon {
+    color: #5b5b5b;
+    transition: .1s ease-in-out;
+    animation: Shake 1s infinite;
+}
+
+.new-advert {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background: linear-gradient(to top right, #b5a570 0%, #d7c27b 100%);
+    overflow: hidden;
+    left: -30vh;
+}
+
+.new-advert-footer {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    height: 5vh;
+}
+
+.new-advert-footer-item {
+    position: relative;
+    float: left;
+    width: 33%;
+    height: 100%;
+    text-align: center;
+    line-height: 5vh;
+    font-size: 2.2vh;
+    transition: .1s linear;
+    color: white;
+}
+
+.new-advert-footer-item:hover {
+    transition: .1s linear;
+}
+
+.new-advert-footer-item:hover .new-advert-icon {
+    color: #5b5b5b;
+    animation: Shake 1s infinite;
+}
+
+.new-advert-header {
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    top: 0;
+}
+
+#new-advert-header-text {
+    position: absolute;
+    top: 6vh;
+    left: 4.8vh;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.8vh;
+    color: white;
+}
+
+#advert-new-url{
+    position: absolute;
+    height: 4vh;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    background-color: rgba(23, 23, 23, 90%);
+    outline: none;
+    resize: none;
+    font-family: 'Quicksand', sans-serif;
+    padding: 0.87vh;
+    font-size: 1.4vh;
+    top: 39.2vh;
+    width: 23vh;
+    color: white;
+    border: 2px solid #e1b60a;
+}
+
+#advert-new-url::-webkit-scrollbar {
+    display: none;
+}
+
+.new-advert-textarea {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    color: white;
+    right: 0;
+    top: 11vh;
+    height: 27vh;
+    width: 80%;
+    outline: none;
+    resize: none;
+    border: 2px solid #e1b60a;
+    background-color: rgba(23, 23, 23, 90%);
+    padding: 1.5vh;
+    font-family: 'Quicksand', sans-serif;
+    transition: .1s linear;
+}
+
+#advert-new-category {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 44.5vh;
+    width: 80%;
+    height: 3%;
+    border: 2px solid #e1b60a;
+}
+
+.advert-home {
+    position: relative;
+    left: 0;
+}
+
+.nomails {
+    text-align: center;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5vh;
+    line-height: 20vh;
+}

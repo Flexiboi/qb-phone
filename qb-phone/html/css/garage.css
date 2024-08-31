@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+.garage-app {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, #272727 0%, rgb(23, 23, 23));
+    overflow: hidden;
+}
+
+.garage-app-header {
+    position: absolute;
+    top: 20px;
+    height: 9vh;
+    width: 100%;
+    text-align: center;
+    line-height: 13.5vh;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 3vh;
+    letter-spacing: 8px;
+}
+
+.garage-homescreen {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0vh;
+}
+
+.garage-detailscreen {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: -30vh;
+}
+
+.garage-vehicles {
+    position: absolute;
+    width: 90%;
+    height: 44.5vh;
+    top: 10.5vh;
+    margin: 0 auto;
+    left: -3px;
+    right: 0;
+    overflow-y: scroll;
+}
+
+.garage-vehicles::-webkit-scrollbar {
+    display: none;
+}
+
+.garage-vehicle {
+    position: relative;
+    height: 7vh;
+    width: 100%;
+    background: linear-gradient(0deg, #d1d1d1 0%, rgb(243, 243, 243));
+    transition: .08s linear;
+    margin-bottom: 1vh;
+    box-shadow: 0rem 0rem 0.1rem 0.05rem #000000;
+    filter: drop-shadow(0px 2px 2px rgba(14, 14, 14, 0.302));
+}
+
+.garage-vehicle-firstletter {
+    position: relative;
+    line-height: 7vh;
+    left: 1.2vh;
+    background: linear-gradient(180deg, #ca883d 0%, rgb(207, 126, 50));
+    padding-top: 1.2vh;
+    padding-bottom: 1.2vh;
+    padding-left: 1.8vh;
+    padding-right: 1.8vh;
+    border-radius: 10%;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2vh;
+    font-weight: bold;
+    transition: .05s linear;
+    filter: drop-shadow(0px 2px 2px rgba(14, 14, 14, 0.302));
+}
+
+.garage-vehicle:hover {
+    background: linear-gradient(180deg, #dfdddd 0%, rgb(165, 164, 164));
+    transform: scale(1.01);
+}
+
+.garage-vehicle-name {
+    position: absolute;
+    left: 7.2vh;
+    top: 2.5vh;
+    color: rgb(48, 48, 48);
+    line-height: 2vh;
+    font-size: 1.3vh;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    letter-spacing: 3px;
+    min-width: 260px;
+    max-width: 260px;
+    text-align: center;
+}
+
+.garage-cardetails {
+    position: absolute;
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    height: 76%;
+    width: 84%;
+    margin: 0 auto;
+    left: 0vh;
+    right: 0;
+    top: 11vh;
+}
+
+.vehicle-brand {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(0deg, #d1d1d1 0%, rgb(243, 243, 243));
+    padding: .8vh;
+    color: rgb(48, 48, 48);
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 1vh;
+    font-size: 1.2vh;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.vehicle-model {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(0deg, #d1d1d1 0%, rgb(243, 243, 243));
+    padding: .8vh;
+    color: rgb(48, 48, 48);
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 1vh;
+    font-size: 1.2vh;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.vehicle-plate {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(0deg, #d1d1d1 0%, rgb(243, 243, 243));
+    padding: .8vh;
+    color: rgb(48, 48, 48);
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 1vh;
+    font-size: 1.2vh;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.vehicle-garage {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(0deg, rgb(243, 243, 243) 0%, #d1d1d1);
+    padding: .8vh;
+    color: rgb(48, 48, 48);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2vh;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.vehicle-status {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(0deg, #d1d1d1 0%, rgb(243, 243, 243));
+    padding: .8vh;
+    color: rgb(48, 48, 48);
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 1vh;
+    font-size: 1.2vh;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.vehicle-fuel {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(0deg, #d1d1d1 0%, rgb(243, 243, 243));
+    padding: .8vh;
+    color: rgb(48, 48, 48);
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 1vh;
+    font-size: 1.2vh;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.vehicle-engine {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(0deg, #d1d1d1 0%, rgb(243, 243, 243));
+    padding: .8vh;
+    color: rgb(48, 48, 48);
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 1vh;
+    font-size: 1.2vh;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.vehicle-body {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(0deg, #d1d1d1 0%, rgb(243, 243, 243));
+    padding: .8vh;
+    color: rgb(48, 48, 48);
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 1vh;
+    font-size: 1.2vh;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+
+.vehicle-answer {
+    float: right;
+    font-size: 1.1vh;
+}
+
+.vehicle-answer-parked {
+    text-align: center;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    font-size: 10px;
+}
+
+
+.return-track {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.return-track > div {
+    margin: 2px;
+    width: 50%;
+    height: 5vh;
+    background: linear-gradient(0deg, #d1d1d1 0%, rgb(243, 243, 243));
+    border-radius: .3vh;
+    transition: .05s linear;
+    text-align: center;
+    line-height: 5vh;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.4vh;
+    font-weight: bold;
+}
+
+.return-track > div:hover {
+    background: linear-gradient(180deg, #dfdddd 0%, rgb(165, 164, 164));
+    transform: scale(1.01);
+}
+
+.garage-vehicle-name {
+    text-align: left;
+    font-size: 13px;
+    margin-left: -3px;
+}
+
+@media screen and (min-width: 2800px) {
+    .garage-vehicle-name {
+        font-size: 20px;
+    }
+
+    .vehicle-answer-parked {
+        text-align: center;
+        position: absolute;
+        right: 40px;
+        top: 12px;
+        font-size: 20px;
+    }
+}
